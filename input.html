@@ -1,20 +1,19 @@
-<form action="https://esqa.moneris.com/HPPDP/index.php" method="post">
-  <!-- Store ID from Moneris -->
-  <input type="hidden" name="ps_store_id" value="E9RGA78140">
-  <!-- HPP Key from Moneris -->
+<form action="https://www3.moneris.com/HPPDP/index.php" method="post">
+  <!-- Your live Store ID and HPP Key -->
+  <input type="hidden" name="ps_store_id" value="E9RGA78140"> 
   <input type="hidden" name="hpp_key" value="hp7GCPB7L9QM">
-  
-  <!-- Invoice Number -->
+
+  <!-- Invoice number and amount -->
   <label for="invoice">Invoice Number:</label>
   <input type="text" id="invoice" name="order_id" required><br>
 
-  <!-- Amount -->
   <label for="amount">Amount:</label>
-  <input type="number" step="0.01" id="amount" name="charge_total" required><br>
+  <input type="number" id="amount" name="charge_total" required><br>
 
-  <!-- Currency -->
-  <input type="hidden" name="currency_code" value="CAD">
-  
-  <!-- Complete Payment Button -->
+  <!-- Currency (CAD or USD) -->
+  <input type="hidden" name="currency_code" value="CAD"> 
+
+  <!-- Submit button -->
   <button type="submit">Complete Payment</button>
 </form>
+
