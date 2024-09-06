@@ -1,18 +1,90 @@
-<form action="https://www3.moneris.com/HPPDP/index.php" method="post">
-  <!-- Your live Store ID and HPP Key -->
-  <input type="hidden" name="ps_store_id" value="E9RGA78140"> 
-  <input type="hidden" name="hpp_key" value="hp7GCPB7L9QM">
-
-  <!-- Invoice number and amount -->
-  <label for="invoice">Invoice Number:</label>
-  <input type="text" id="invoice" name="order_id" required><br>
-
-  <label for="amount">Amount:</label>
-  <input type="number" id="amount" name="charge_total" required><br>
-
-  <!-- Currency (CAD or USD) -->
-  <input type="hidden" name="currency_code" value="CAD"> 
-
-  <!-- Submit button -->
-  <button type="submit">Complete Payment</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="number"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4A90E2; /* Blue color */
+            color: white;
+            border: none;
+            padding: 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #357ABD; /* Darker blue */
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Secure Payment Form</h1>
+        <form action="https://www3.moneris.com/HPPDP/index.php" method="post">
+            <input type="hidden" name="ps_store_id" value="E9RGA78140">
+            <input type="hidden" name="hpp_key" value="hp7GCPB7L9QM">
+            
+            <label for="invoice">Invoice Number:</label>
+            <input type="text" id="invoice" name="order_id" required>
+            
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" name="charge_total" required>
+            
+            <input type="hidden" name="currency_code" value="CAD">
+            
+            <button type="submit">Complete Payment</button>
+        </form>
+        <div class="footer">
+            <p>SolveIT Solutions</p>
+        </div>
+    </div>
+</body>
+</html>
